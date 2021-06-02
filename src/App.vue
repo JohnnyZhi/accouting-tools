@@ -6,32 +6,13 @@
 
 <style lang="scss">
 @import "~@/assets/style/help.scss";
-*{
-  margin: 0;padding: 0;
-  box-sizing: border-box;
-}
-body{
+@import "~@/assets/style/reset.scss";
+  body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #333;
-    line-height: 1.5;
     font-family: $font-hei;
-}
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+    font-size: 16px;
+    line-height: 1.5;
   }
-}
 </style>

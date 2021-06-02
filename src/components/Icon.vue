@@ -4,9 +4,9 @@
      </svg>
 </template>
 
-<script setup lang="ts">
-    // let importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireContext.keys().forEach(requireContext);/*使用时取消注释*/
-    // try {importAll(require.context('../assets/icons', true, /\.svg$/));} catch (error) {console.log(error);}/*使用时取消注释*/
+<script  lang="ts">
+    // const importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireContext.keys().forEach(requireContext);
+    // try {importAll(require.context('../assets/icons', true, /\.svg$/));} catch (error) {console.log(error);}
     
     export default {
         props: ['name'],

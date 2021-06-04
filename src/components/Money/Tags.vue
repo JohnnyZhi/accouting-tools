@@ -28,6 +28,7 @@ import { Component, Prop } from 'vue-property-decorator'
       } else {
         this.selectedTags.push(tag);
       }
+      this.$emit('Update:value',this.selectedTags)
     }
     create() {
       const name = window.prompt('请输入标签名');
@@ -56,7 +57,7 @@ import { Component, Prop } from 'vue-property-decorator'
         $h: 24px;
         height: $h;
         line-height: $h;
-        border-radius: $h/2;
+        border-radius:$h/2;
         padding: 0 16px;
         margin-right: 12px;
         margin-top: 4px;

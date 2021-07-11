@@ -1313,6 +1313,11 @@
   resolved "https://registry.nlark.com/@types/node/download/@types/node-15.6.1.tgz?cache=0&sync_timestamp=1621901244878&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-15.6.1.tgz#32d43390d5c62c5b6ec486a9bc9c59544de39a08"
   integrity sha1-MtQzkNXGLFtuxIapvJxZVE3jmgg=
 
+"@types/node@^15.12.4":
+  version "15.14.1"
+  resolved "https://registry.nlark.com/@types/node/download/@types/node-15.14.1.tgz#4f9d3689532499fdda1c898e19f4593718655e36"
+  integrity sha1-T502iVMkmf3aHImOGfRZNxhlXjY=
+
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
   resolved "https://registry.nlark.com/@types/normalize-package-data/download/@types/normalize-package-data-2.4.0.tgz?cache=0&sync_timestamp=1621242064742&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnormalize-package-data%2Fdownload%2F%40types%2Fnormalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
@@ -10918,10 +10923,10 @@ vue-property-decorator@^9.1.2:
   resolved "https://registry.npm.taobao.org/vue-property-decorator/download/vue-property-decorator-9.1.2.tgz?cache=0&sync_timestamp=1615327572569&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-property-decorator%2Fdownload%2Fvue-property-decorator-9.1.2.tgz#266a2eac61ba6527e2e68a6933cfb98fddab5457"
   integrity sha1-JmourGG6ZSfi5oppM8+5j92rVFc=
 
-vue-router@^3.2.0:
-  version "3.5.1"
-  resolved "https://registry.nlark.com/vue-router/download/vue-router-3.5.1.tgz?cache=0&sync_timestamp=1620899536020&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvue-router%2Fdownload%2Fvue-router-3.5.1.tgz#edf3cf4907952d1e0583e079237220c5ff6eb6c9"
-  integrity sha1-7fPPSQeVLR4Fg+B5I3Igxf9utsk=
+vue-router@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.nlark.com/vue-router/download/vue-router-3.5.2.tgz#5f55e3f251970e36c3e8d88a7cd2d67a350ade5c"
+  integrity sha1-X1Xj8lGXDjbD6NiKfNLWejUK3lw=
 
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.3"

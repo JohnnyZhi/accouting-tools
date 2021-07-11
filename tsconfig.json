@@ -15,7 +15,9 @@
     "types": [
       "webpack-env",
       "jest",
+      "node"
     ],
+    "typeRoots": [ "../node_modules/@types" ],
     "paths": {
       "@/*": [
         "src/*"
@@ -38,4 +40,5 @@
   "exclude": [
     "node_modules"
   ],
+  // "json.schemaDownload.enable": false,
 }

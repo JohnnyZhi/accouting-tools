@@ -1,9 +1,9 @@
 <template>
   <Layout class-prefix="layout">
-    <NumberPad @update:value="onUpdateAmount" @submit="saveRecord"/>
+    <NumberPad @update:value="record.amount" @submit="saveRecord"/>
     <Types :value.sync="record.type"/>
     <Notes field-name="备注" placeholder="在这里输入备注" @update:value="onUpdateNotes"/>
-    <Tags :data-source.sync ="tags" @update:value="onUpdateTags"/>
+    <Tags/>
   </Layout>
 </template>
 
@@ -13,43 +13,35 @@
   import Types from '@/components/Money/Types.vue';
   import Notes from '@/components/Money/Notes.vue';
   import Tags from '@/components/Money/Tags.vue';
-  import { Component, Watch } from 'vue-property-decorator';
-  import recordListModel from '@/models/recordListModel';
-  import tagListModel from '@/models/tagListModel';
-
-  const recordList = recordListModel.fetch();
-  const tagList = tagListModel.fetch();
+  import { Component} from 'vue-property-decorator';
+  import OldStore from '@/store/index2.ts';
+  import store from '@/store/index.ts';
 
   @Component({
-    components: {Tags, Notes, Types, NumberPad}
+    components: {Tags, Notes, Types, NumberPad},
+    computed:{
+      count(){
+        return store.state.count
+      }
+    }
   })
   export default class Money extends Vue {
-    tags = tagList;
-    recordList: RecordItem[] = recordList;
+    recordList = OldStore.recordList;
     record: RecordItem = {
       tags: [], notes: '', type: '-', amount: 0
     }
 
-    onUpdateTags(value:string[]){
-      this.record.tags = value
-    }
+
+  
     onUpdateNotes(value: string){
       this.record.notes = value
     }
-    onUpdateAmount(value:string){
-      this.record.amount = parseFloat(value)
-    }
 
     saveRecord(){
-      const record2: RecordItem =recordListModel.clone(this.record);
-      record2.createAt = new Date()
-      this.recordList.push(record2);
-    }
-    @Watch('recordList')
-    onRecordListChange(){
-      recordListModel.save(this.recordList);
+     OldStore.createRecord(this.record)
     }
   }
+
 </script>
 
 <style lang="scss">

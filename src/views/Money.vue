@@ -14,31 +14,31 @@
   import Notes from '@/components/Money/Notes.vue';
   import Tags from '@/components/Money/Tags.vue';
   import { Component} from 'vue-property-decorator';
-  import OldStore from '@/store/index2.ts';
-  import store from '@/store/index.ts';
+
 
   @Component({
     components: {Tags, Notes, Types, NumberPad},
     computed:{
-      count(){
-        return store.state.count
+      recordList(){
+        return this.$store.state.recoreList
       }
     }
   })
   export default class Money extends Vue {
-    recordList = OldStore.recordList;
     record: RecordItem = {
       tags: [], notes: '', type: '-', amount: 0
     }
 
+  cteated(){
+    this.$store.commit('fetchRecords')
+  }
 
-  
     onUpdateNotes(value: string){
       this.record.notes = value
     }
 
     saveRecord(){
-     OldStore.createRecord(this.record)
+     this.$store.commit('createRecord',this.record)
     }
   }
 
